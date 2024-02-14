@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title-div,
+.score-div,
+.score-limter {
+  font-family: "M PLUS Code Latin", monospace;
+  font-size: xx-large;
+  color: burlywood;
+}
+
+.score-div,
+.score-limter {
+  font-size: larger;
+  color: black;
+}
+
+.cricketNames {
+  font-family: "M PLUS Code Latin", monospace;
+}
+
+.content-div {
+  background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+}
