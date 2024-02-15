@@ -27,7 +27,7 @@ function App() {
       let randomId = getRandomNumbers(10);
       randomId.forEach((id) => {
         urlIds.push(
-          `https://cricket.sportmonks.com/api/v2.0/players/${id}/?api_token=${
+          `https://cors-anywhere.herokuapp.com/https://cricket.sportmonks.com/api/v2.0/players/${id}/?api_token=${
             import.meta.env.VITE_API_KEY
           }`
         );
