@@ -1,3 +1,5 @@
+import { Key } from "react";
+
 interface PlayerInfo {
   id: string;
   country_id: number;
@@ -18,7 +20,11 @@ export default function CardsComponent({
       <div className="flex flex-row flex-wrap justify-evenly w-[100%] md:w-[80%] lg:w-[70%] lg:gap-3">
         {playersList.map((player) => {
           return (
-            <IndividualComponent player={player} clickCallback={clickCb} />
+            <IndividualComponent
+              key={player.fullname as Key}
+              player={player}
+              clickCallback={clickCb}
+            />
           );
         })}
       </div>
@@ -35,7 +41,6 @@ function IndividualComponent({
 }) {
   return (
     <div
-      key={player.fullname}
       onClick={() => clickCallback(player.fullname)}
       className="individualCard w-[11.25rem] h-[15rem] flex bg-slate-200 transform transition duration-250 hover:scale-105"
     >
