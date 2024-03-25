@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page {
+  background-image: url(../public/background.jpg);
+  background-repeat: no-repeat;
+}
