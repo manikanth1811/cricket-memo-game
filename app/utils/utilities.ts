@@ -20,7 +20,6 @@ export function setHighScoreLS(highScore: number): void {
 
 export function getHighScoreLS(): number {
   if (localStorage.getItem("highScore")) {
-    console.log(localStorage.getItem("highScore"));
     parseInt(localStorage.getItem("highScore") as string, 10);
   }
   return 0;

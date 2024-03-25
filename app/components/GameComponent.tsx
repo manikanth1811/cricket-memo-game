@@ -34,7 +34,6 @@ export default function GameComponent({
   }, []);
 
   function newGame(score: number): boolean {
-    console.log(`current Score in newGame Start ${score}`);
     if (score < 16) {
       if (score === 15 || score === 9 || score === 3) {
         return true;
@@ -48,7 +47,6 @@ export default function GameComponent({
   }
 
   function newPlayerNumber(score: number): number {
-    console.log(`score in new game ${score}`);
     if (score === 3) {
       return 6;
     }
@@ -86,7 +84,6 @@ export default function GameComponent({
       setHighScore(score + 1);
     }
   }
-  console.log(currPlayerList);
   return (
     <div className="gameContainer flex flex-col flex-grow">
       <Score score={score} highScore={highScore} />
